@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Advanced HTML Template</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html, body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 100%;
+            max-height: 100%;
+        }
+
+        main {
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="root" class="h-full max-h-full flex flex-col">
+        <header class="p-4 text-black text-center bg-slate-300 no-grow">
+            <nav>
+                Company Name
+            </nav>
+        </header>
+    
+        <main class="mx-auto max-width max-w-5xl w-full text-black p-4 my-8 max-h-dvh grow overflow-y-auto">
+            <section class="m-auto bg-slate-300 flex flex-col p-8 inline-block rounded-3xl">
+                <h1 class="text-center text-3xl"> Order Component </h1>
+                <form class="w-full max-w-lg mx-auto mt-16">
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="firstName">
+                                First Name
+                            </label>
+                            <input
+                                required
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                                id="firstName"
+                                type="text"
+                                placeholder="ex. Johnny"
+                            />
+                            <p class="text-red-500 text-xs italic" role="error"></p>
+                        </div>
+                        <div class="w-full md:w-1/2 px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="lastName">
+                                Last Name
+                            </label>
+                            <input
+                                required
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="lastName"
+                                type="text"
+                                placeholder="ex. Walker"
+                            />
+                            <p class="text-red-500 text-xs italic" role="error"></p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6 gap-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="email">
+                                Email
+                            </label>
+                            <input
+                                required
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="email"
+                                type="email"
+                                placeholder="ex. eros_pista@gmail.com"
+                            />
+                            <p class="text-red-500 text-xs italic" role="error"></p>
+                        </div>
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="country">
+                                Country
+                            </label>
+                            <input
+                                required
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="country"
+                                type="text"
+                                placeholder="ex. Romania"
+                            />
+                            <p class="text-red-500 text-xs italic" role="error"></p>
+                        </div>
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="city">
+                                City
+                            </label>
+                            <input
+                                required
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="city"
+                                type="text"
+                                placeholder="ex. Cluj-Napoca"
+                            />
+                            <p class="text-red-500 text-xs italic" role="error"></p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="state">
+                                State
+                            </label>
+                            <input
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="state"
+                                type="text"
+                                placeholder="ex. California"
+                            />
+                            <p class="text-red-500 text-xs italic" role="error"></p>
+                        </div>
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="zip">
+                                Zip
+                            </label>
+                            <input
+                                required
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="zip"
+                                type="text"
+                                placeholder="ex. 100010"
+                            />
+                            <p class="text-red-500 text-xs italic" role="error"></p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="address">
+                                Address
+                            </label>
+                            <input
+                                required
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="address"
+                                type="text"
+                                placeholder="ex. Coposu nr. 10, Floor 1, ap. 12"
+                            />
+                            <p class="text-red-500 text-xs italic" role="error"></p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-6">
+                        <div class="w-full px-3">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="category">
+                                Category
+                            </label>
+                            <div class="relative">
+                                <select
+                                    class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                    id="category"
+                                >
+                                    <option>CPU</option>
+                                    <option>Memory (Ram)</option>
+                                    <option>SSD & HDD</option>
+                                    <option>Optical Drive</option>
+                                    <option>Printer & Scanners</option>
+                                    <option>Monitor</option>
+                                    <option>Keyboard</option>
+                                    <option>Mouse</option>
+                                </select>
+                                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                                    <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                                </div>
+                            </div>
+                            <p class="text-red-500 text-xs italic" role="error"></p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap -mx-3 mb-2">
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="productCode">
+                                Product Code
+                            </label>
+                            <input
+                                required
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="productCode"
+                                type="text"
+                                placeholder="ex. PC-00102111"
+                            />
+                            <p class="text-red-500 text-xs italic" role="error"></p>
+                        </div>
+                        <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                            <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="quantity">
+                                Quantity
+                            </label>
+                            <input
+                                required
+                                class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                                id="quantity"
+                                type="text"
+                                placeholder="ex. 1"
+                            />
+                            <p class="text-red-500 text-xs italic" role="error"></p>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-center mt-8">
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit">
+                            Submit
+                        </button>
+                    </div>
+                  </form>
+            </section>
+        </main>
+    
+        <footer class="p-4 text-black text-center bg-slate-300 no-grow">
+            Copyright 2024 Company Name
+        </footer>
+    </div>
+
+    <script>
+
+        // there is many way to make this works, from the simplest to the most complex architecture with layers
+        // the tokens, services, apis, dependency injection, etc. but we use a simple encampulation for the controller
+        const controller = ((selector) => {
+            const endpoint = 'https://api.example.com';
+            const form = document.querySelector(selector);
+
+            // cache here the form elements, and later we not need to query after the elements
+            // other option if we create them dynamically with the javascript and insert into the DOM
+            // it will look like this: elements.inputs['firstName'] = HTMLInputElement;
+            const elements = {
+                inputs: {},
+                errors: {},
+            };
+
+            // we would use this object to store the validation related informations: rules, results, errorCount
+            const validator = {
+                // we would use this object to store the validation rules (Record<id, (value) => string | false>)
+                rules: {
+                    'firstName': (value) => (value.length > 2 && value.length < 64) || 'First name must be between 2 and 64 characters',
+                    'lastName': (value) => (value.length > 2 && value.length < 64) || 'Last name must be between 2 and 64 characters',
+                    'email': (value) => /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(value) || 'Invalid email address',
+                    'country': (value) => (value.length > 2 && value.length < 64) || 'Country must be between 2 and 64 characters',
+                    'city': (value) => (value.length > 2 && value.length < 64) || 'City must be between 2 and 64 characters',
+                    'zip': (value) => /^[0-9]{4,6}$/.test(value) || 'Invalid zip code',
+                    'address': (value) => (value.length > 6 && value.length < 128) || 'Address must be between 6 and 128 characters',
+                    'productCode': (value) => /^[a-zA-Z]{2,3}\-[0-9]{8}$/.test(value) || 'Invalid product code format',
+                    'quantity': (value) => (value.length > 0 && !isNaN(parseInt(value)) && parseInt(value) > 0) || 'Invalid quantity, must be number and higher than 0',
+                },
+                // we would use this function to validate a single field
+                validate: function (id, value) {
+                    if (!this.rules[id]) {
+                        return true;
+                    }
+
+                    const error = this.rules[id](value);
+                    if (typeof error === 'string') {
+                        this.errorCount++;
+                        this.results[id] = error;
+                    } else {
+                        this.results[id] = null;
+                    }
+                    return !error;
+                },
+
+                // we would use this property to store the validation results (Record<id, error text or null value>)
+                results: {},
+            
+                // we would use this property to count the errors, useful for easy check if the form is valid
+                errorCount: 0,
+
+                // we would use this function to validate the whole form at once
+                validateAll: function (data) {
+                    this.errorCount = 0;
+                    this.results = {};
+                    Object.entries(data).forEach(([id, value]) => {
+                        this.validate(id, value);
+                    });
+                    return this.errorCount === 0;
+                }
+            };
+
+            // we would use this function to submit the form
+            const onSubmit = async (e) => {
+                // we not want the deault behaviour for the form submit
+                e.preventDefault();
+                e.stopPropagation();
+                
+                // get the data then validate it, if it is not valid we would render the validation results
+                const data = getFormData();
+                validator.validateAll(data);
+                renderValidatorResults();
+
+                // if the form is not valid we would return and not execute the rest of the code
+                if (validator.errorCount > 0) {
+                    return false;
+                }
+
+                // if the form is valid we would send the data to the server
+                // here we should send post a request to the server
+                try {
+                    const response = await makeOrder(data);
+                    if (response.status === 'success') {
+                        alert('Order has been made successfully ' + JSON.stringify(data));
+                    }
+                // if fetch post request failed then we just alert the user
+                } catch (error) {
+                    alert('An error occured while making the order: ' + error?.message || 'Network error');
+                }
+
+                return false;
+            };
+
+            // we would use this function to validate the form
+            const renderValidatorResults = () => {
+                // we would use this function to render the validation results
+                Object.entries(validator.results).forEach(([id, error]) => {
+                    // we would use this function to render the validation results: if have error(string value) and when it dont have (null value)
+                    if (error) {
+                        elements.errors[id].textContent = error;
+                        elements.inputs[id].classList.add('border-red-500');
+                    } else {
+                        elements.errors[id].textContent = '';
+                        elements.inputs[id].classList.remove('border-red-500');
+                    }
+                });
+            };
+            
+            // we would use this function to get the form data
+            const getFormData = () => {
+                const data = {};
+                // we go over on the input (incl. select/textarea too) elements and populate the data object with the input values
+                Object.entries(elements.inputs).forEach(([id, input]) => {
+                    data[id] = input.value;
+                });
+
+                return data;
+            };
+
+            // we would use fetch to send the data to the server
+            const makeOrder = async (data) => {
+                // normally we would send the data to the server
+                // const response = await fetch(endpoint, {
+                //     method: 'POST',
+                //     headers: {
+                //         'Content-Type': 'application/json'
+                //     },
+                //     body: JSON.stringify(data)
+                // });
+                // return response.json();
+
+                // faking the server response
+                return Promise.resolve({ status: 'success' });
+            };
+
+            // we would use this function to initialize the controller, example event attachings
+            const init = () => {
+                // search in DOM and populate the elements object (we use as a cache for the dom elements, for reusability and performance)
+                // in case it is not a static form (elements added/removed dynamically, we should use a mutation observer to keep the cache updated)
+                const inputs = form.querySelectorAll('input, select, textarea');
+                // we store the input and error elements in the elements object (cache object for the DOM form elements)
+                inputs.forEach(input => {
+                    const fieldName = input.id;
+                    elements.inputs[fieldName] = input;
+                    elements.errors[fieldName] = input.parentElement.querySelector('[role="error"]');
+                });
+
+                // we would attach an event listener to the form
+                form.addEventListener('submit', onSubmit);
+            };
+
+            // we would return the public methods and properties
+            return {
+                init,
+                getFormData,
+                dispose: () => {
+                    form.removeEventListener('submit', onSubmit);
+                }
+            };
+        })('#root');
+
+        // we initialize the controller
+        controller.init();
+
+    </script>
+</body>
+</html>
+
