@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4 - Mortgage Repayments</title>
+</head>
+<body>
+    <script>
+        // Sorry but i not was sure about the task, so i made a simple example of how to calculate the mortgage repayments
+        // Mortgage repayments was explained here: https://onladder.co.uk/blog/how-to-calculate-mortgage-repayments/
+        // if you want more advanced example, then you can find it here: https://github.com/shadowvzs/algorithms
+        // Calculate mortgage repayments
+        function calculateRepayments(principal, interestRate, loanTerm) {
+            const monthlyInterestRate = interestRate / 12 / 100;
+            const numberOfPayments = loanTerm * 12;
+            const monthlyPayment = (principal * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -numberOfPayments));
+            return monthlyPayment;
+        }
+
+        // Example usage
+        const principal = 200000;
+        const interestRate = 5;
+        const loanTerm = 30;
+        const monthlyPayment = calculateRepayments(principal, interestRate, loanTerm);
+        console.log("Monthly Payment: $" + monthlyPayment.toFixed(2));
+    </script>
+</body>
+</html>
